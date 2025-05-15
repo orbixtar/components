@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LoadingButton">
+        <attr name="backgroundColor" format="reference|color" />
+        <attr name="text" format="reference|string" />
+        <attr name="textColor" format="reference|color" />
+        <attr name="resetAfterFailed" format="boolean" />
+        <attr name="rippleEnable" format="boolean" />
+        <attr name="rippleColor" format="reference|color" />
+        <attr name="rippleAlpha" format="float" />
+        <attr name="cornerRadius" format="dimension" />
+        <attr name="minHeight" format="dimension" />
+        <attr name="disabledColor" format="reference|color" />
+        <attr name="disabledTextColor" format="reference|color" />
+    </declare-styleable>
+</resources>
