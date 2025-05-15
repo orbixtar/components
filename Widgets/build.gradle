@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.maven.publish)
 }
 
 android {
@@ -30,30 +29,7 @@ android {
     }
 }
 
-publishing {
-    publications {
-        bar(MavenPublication){
-            groupId "com.orbixtar"
-            artifactId "widgets"
-            version "0.9-alpha"
-            artifact("$buildDir/outputs/aar/Widgets-release.aar")
-        }
-    }
-
-    repositories {
-        maven {
-            name "GithubPackages"
-            url uri("https://maven.pkg.github.com/orbixtar/Components")
-            credentials{
-                username = "\${env.GITHUB_USER}"
-                password = "\${env.GITHUB_TOKEN}"
-            }
-        }
-    }
-}
-
 dependencies {
-
     implementation libs.androidx.core.ktx
     implementation libs.androidx.appcompat
     implementation libs.material
